@@ -5,16 +5,19 @@
 
   .top-section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .app-display {
-    width: 50%;
+    width: 95%;
+
     img {
       max-width: 100%;
     }
   }
   .cta {
-    width: 50%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,12 +25,15 @@
     text-align: center;
 
     button {
-      background-color: @accent-green;
-      color: white;
+      background-color: @accent-blue;
+      color: black;
       width: 150px;
       margin: 3px auto;
       padding: 5px;
       border-radius: 3px;
+      font-size: 1.25rem;
+      font-family: @fatfont;
+      font-weight: 400;
     }
   }
 
@@ -35,28 +41,47 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: @light;
+    background-color: white;
 
     .featureDetails {
       display: flex;
       flex-direction: row;
-      background-color: white;
       justify-content: space-around;
       margin: 1%;
 
+
+
+      @media @mobile{
+        flex-direction: column;
+        align-items: center;
+      }
+
       img {
         max-width: 45%;
+
+        @media @mobile{
+          max-width: 95%;;
+        }
       }
 
       p {
         max-width: 45%;
         display: flex;
         align-items: center;
+
+        @media @mobile{
+          max-width: 95%;;
+        }
       }
     }
     #middle-feature {
       display: flex;
       flex-direction: row-reverse;
+
+      @media @mobile{
+        flex-direction: column;
+        align-items: center;
+      }
     }
     h2 {
       background-color: lightgrey;
@@ -65,17 +90,42 @@
   .about {
     display: flex;
     width: 100%;
+
+    @media @mobile{
+      flex-direction: column;
+    }
     .profiles {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+
+      @media @mobile{
+        margin: 15px auto;
+      }
+
+      h3{
+        @media @mobile{
+          font-size: 2.8rem;
+        }
+      }
+
+      p{
+        @media @mobile{
+          font-size: 2rem;
+        }
+      }
     }
 
     .profile-photos {
       width: 100px;
       height: 100px;
       border-radius: 50%;
+
+      @media @mobile{
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }
