@@ -1,12 +1,18 @@
 .featureDiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
   width: 80%;
+  max-width: 1000px;
   margin: 40px auto;
 
   border-radius: 5px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .featureDetails {
     h2 {
@@ -34,18 +40,64 @@
     width: 300px;
     display: flex;
     flex-direction: column;
+    font-size: 1.2rem;
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 20px;
+    }
 
     .featureItem {
       color: @accent-blue;
-      padding: 25px 15px;
+      padding: 5px 10px;
       margin-left: 20px;
       border-radius: 3px;
       width: 300px;
+      border-bottom: 3px solid transparent;
+      color: rgba(255, 255, 255, 0.7);
+
+      .hide {
+        font-size: inherit;
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        margin-bottom: 20px;
+        width: auto;
+      }
+
+      @media (max-width: 800px) {
+        width: auto;
+        max-width: 25%;
+        display: inline-block;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
 
       &.active {
         border-left: 3px solid @accent-blue;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         background: rgba(47, 47, 52, 0.3);
+        color: @accent-blue;
+
+        @media (max-width: 800px) {
+          border-left: none;
+          border-bottom: 3px solid @accent-blue;
+          box-shadow: none;
+        }
+
+        // @media (max-width: 800px) {
+        //   border-top: none;
+        //   border-bottom: 3px solid @accent-blue;
+        //   box-shadow: none;
+        // }
       }
     }
   }

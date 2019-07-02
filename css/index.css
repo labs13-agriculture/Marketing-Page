@@ -68,6 +68,7 @@ h6 {
 }
 header.index.header nav a {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
 }
 .index {
   font-family: Roboto, sans-serif;
@@ -145,18 +146,21 @@ header.index.header nav a {
 }
 .index .mid-section .feature-title {
   font-family: "Josefin Sans", sans-serif;
-  margin: 100px 0px 20px 10%;
+  margin: 100px auto 20px auto;
   color: #40e0d0c4;
+  max-width: 1000px;
+  width: 80%;
 }
 .index .mid-section p.long-feature-description {
   width: 80%;
+  max-width: 1000px;
   margin: 0px auto;
   font-family: "Mandali", sans-serif;
   font-size: 2.5rem;
   color: #ffffffe6;
 }
 .index .feature-spotlight {
-  height: 800px;
+  min-height: 800px;
   flex-direction: column;
   align-items: center;
   display: flex;
@@ -168,8 +172,9 @@ header.index.header nav a {
 .index .feature-spotlight .spotlight-title {
   color: white;
   font-family: Roboto, sans-serif;
-  margin: 50px 0px;
+  margin: 50px auto;
   width: 100%;
+  max-width: 1000px;
 }
 .index .feature-spotlight .gif-container {
   background-image: linear-gradient(to bottom right, red, yellow);
@@ -191,6 +196,7 @@ header.index.header nav a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 60px 0px;
   justify-content: space-evenly;
@@ -247,10 +253,17 @@ header.index.header nav a {
 .featureDiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 80%;
+  max-width: 1000px;
   margin: 40px auto;
   border-radius: 5px;
+}
+@media (max-width: 800px) {
+  .featureDiv {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .featureDiv .featureDetails h2 {
   font-family: "Josefin Sans", sans-serif;
@@ -271,18 +284,61 @@ header.index.header nav a {
   width: 300px;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
+}
+@media (max-width: 800px) {
+  .featureDiv .featureDetails.right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 .featureDiv .featureDetails.right .featureItem {
   color: #40e0d0;
-  padding: 25px 15px;
+  padding: 5px 10px;
   margin-left: 20px;
   border-radius: 3px;
   width: 300px;
+  border-bottom: 3px solid transparent;
+  color: rgba(255, 255, 255, 0.7);
+}
+.featureDiv .featureDetails.right .featureItem .hide {
+  font-size: inherit;
+}
+@media (max-width: 1000px) {
+  .featureDiv .featureDetails.right .featureItem .hide {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .featureDiv .featureDetails.right .featureItem {
+    margin-bottom: 20px;
+    width: auto;
+  }
+}
+@media (max-width: 800px) {
+  .featureDiv .featureDetails.right .featureItem {
+    width: auto;
+    max-width: 25%;
+    display: inline-block;
+  }
+}
+.featureDiv .featureDetails.right .featureItem:hover {
+  cursor: pointer;
 }
 .featureDiv .featureDetails.right .featureItem.active {
   border-left: 3px solid #40e0d0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   background: rgba(47, 47, 52, 0.3);
+  color: #40e0d0;
+}
+@media (max-width: 800px) {
+  .featureDiv .featureDetails.right .featureItem.active {
+    border-left: none;
+    border-bottom: 3px solid #40e0d0;
+    box-shadow: none;
+  }
 }
 @media (max-width: 500px) {
   .featureDiv {
