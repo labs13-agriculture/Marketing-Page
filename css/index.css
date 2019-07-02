@@ -34,13 +34,14 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #3c394b;
+  background: #00000061;
   color: #e9e9e7;
-  border-bottom: 2px solid #40e0d0;
   min-width: 100%;
   min-height: 60px;
   font-family: Josefin Sans, sans-serif;
   font-weight: 300;
+  position: fixed;
+  top: 0;
   padding: 10px 30px;
 }
 .header a {
@@ -61,20 +62,47 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: black;
+  background: radial-gradient(#215e49bf, #1c1e3c);
+}
+.index .top-section .elevator-line {
+  font-size: 7rem;
+  color: #ffffffe6;
+}
+.index .top-section .top-section-intro-detail {
+  font-family: 'Josefin', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  color: #ffffff80;
+  letter-spacing: 3px;
+}
+.index .top-section .top-section-detail {
+  font-family: 'Mandali', sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  color: #ffffff80;
 }
 .index .app-display {
-  width: 95%;
+  position: relative;
+  width: 80%;
+}
+.index .app-display .styled-img-overlay {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #16161a 100%);
+  height: 100%;
+  width: 100%;
 }
 .index .app-display img {
   max-width: 100%;
 }
 .index .cta {
-  width: 95%;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin: 150px 80px 80px;
 }
 .index .cta button {
   background-color: #40e0d0;
