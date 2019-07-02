@@ -38,7 +38,7 @@
   }
 
   .featureDetails.right {
-    width: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
 
@@ -58,6 +58,7 @@
       width: 300px;
       border-bottom: 3px solid transparent;
       color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
 
       font-size: 1.4rem;
 
@@ -70,11 +71,6 @@
       }
 
       @media (max-width: 1000px) {
-        margin-bottom: 20px;
-        width: auto;
-      }
-
-      @media (max-width: 800px) {
         width: auto;
         max-width: 25%;
         display: inline-block;
