@@ -66,6 +66,9 @@ h6 {
 .header a:hover {
   color: #40e0d0;
 }
+header.index.header nav a {
+  font-family: "Josefin Sans", sans-serif;
+}
 .index {
   font-family: Roboto, sans-serif;
   width: 100%;
@@ -258,6 +261,7 @@ h6 {
 }
 .featureDiv .imgContainer .featureImage.active {
   display: block;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 .featureDiv .featureDetails.right {
   width: 300px;
@@ -273,7 +277,7 @@ h6 {
 }
 .featureDiv .featureDetails.right .featureItem.active {
   border-left: 3px solid #40e0d0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   background: rgba(47, 47, 52, 0.3);
 }
 @media (max-width: 500px) {
