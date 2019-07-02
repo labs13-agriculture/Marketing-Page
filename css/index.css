@@ -133,6 +133,7 @@ h6 {
   font-weight: 400;
 }
 .index .mid-section {
+  height: 800px;
   display: flex;
   flex-direction: column;
   background-color: #19181b;
@@ -146,7 +147,7 @@ h6 {
 }
 .index .mid-section p.long-feature-description {
   width: 80%;
-  margin: 0px auto 40px;
+  margin: 0px auto;
   font-family: 'Josefin', sans-serif;
   font-size: 2.5rem;
   color: #ffffffe6;
@@ -155,7 +156,7 @@ h6 {
   display: flex;
   flex-direction: row;
   width: 80%;
-  margin: 0px auto;
+  margin: 0px auto 40px;
   border-radius: 5px;
 }
 .index .mid-section .featureDiv .featureDetails h2 {
@@ -218,9 +219,42 @@ h6 {
     align-items: center;
   }
 }
+.index .feature-spotlight {
+  height: 800px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #151414;
+  padding: 80px;
+}
+.index .feature-spotlight .spotlight-title {
+  color: white;
+  font-family: Roboto, sans-serif;
+  margin: 50px 0px;
+  width: 100%;
+}
+.index .feature-spotlight .gif-container {
+  background-image: linear-gradient(to bottom right, red, yellow);
+  display: flex;
+  justify-content: center;
+  border-radius: 60px;
+  padding: 39px;
+  width: 80%;
+}
+.index .feature-spotlight img {
+  border-radius: 20px;
+}
+.index .lower-section {
+  justify-content: center;
+  display: flex;
+}
 .index .about {
   display: flex;
-  width: 100%;
+  width: 80%;
+  padding: 60px 0px;
+  justify-content: space-between;
 }
 @media (max-width: 500px) {
   .index .about {
@@ -231,7 +265,6 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 @media (max-width: 500px) {
   .index .about .profiles {
