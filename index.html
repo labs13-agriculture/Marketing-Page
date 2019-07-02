@@ -5,143 +5,191 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald%7CRoboto:900&display=swap"
-      rel="stylesheet"  
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto:900&display=swap"
+      rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Mandali&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/index.css" />
+    <script defer="defer" src="./components/featured/featured.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   </head>
   <body>
     <!-- <script defer="defer" src="./components/cta/cta.js"></script> -->
     <header class="index header">
-      <a href="https://tiemendocrm.netlify.com/"><h1 class="logo">TIEME NDO <img class="logo-img" src="./images/logo64.png"></h1></a>
+      <a href="https://tiemendocrm.netlify.com/"
+        ><h1 class="logo">
+          TIEME NDO <img class="logo-img" src="./images/logo64.png" /></h1
+      ></a>
       <nav>
         <a href="https://tiemendocrm.netlify.com/">Login</a>
       </nav>
     </header>
     <main class="index">
       <section class="top-section">
-          <div class="cta">
-              <p class="top-section-intro-detail">LAMBDA SCHOOL PRESENTS</p>
-            <h1 class="elevator-line">Effortless CRM </h1>
-              <p class="top-section-detail">Beautifully simple tools made for Tieme Ndo to improve the productivity of both their organization and clients.</p>
-              <!-- <button class="ctaButton">LOG IN</button>
+        <div class="cta">
+          <p class="top-section-intro-detail">LAMBDA SCHOOL PRESENTS</p>
+          <h1 class="elevator-line">Effortless CRM</h1>
+          <p class="top-section-detail">
+            Beautifully simple tools made for Tieme Ndo to improve the
+            productivity of both their organization and clients.
+          </p>
+          <!-- <button class="ctaButton">LOG IN</button>
               <button class="ctaButton">ANDROID DOWNLOAD</button> -->
-          </div>
-          <div class="app-display">
-            <div class="styled-img-overlay">
-              
-            </div>
-            <img alt="Search Image" src="./images/search.png" />
-          </div>
+        </div>
+        <div class="app-display">
+          <div class="styled-img-overlay"></div>
+          <img alt="Search Image" src="./images/search.png" />
+        </div>
       </section>
       <section class="mid-section">
-          <h2 class="feature-title">Features</h2>
-          <p class="long-feature-description">The Tieme Ndo CRM was designed prioritizing simplicity, performance, and ease of use. Here is some additional filler content to see what the page looks like with more content.</p>
+        <h2 class="feature-title">Features</h2>
+        <p class="long-feature-description">
+          The Tieme Ndo CRM was designed prioritizing simplicity, performance,
+          and ease of use.
+        </p>
         <div class="featureDiv">
-            
-            <div class="featureDetails left" >
-                <div class="featureDetails">
-                <h2>Dark Mode</h2><span class="icon">
-                <p>Manage installments, inventory, or transactions at any time of day.</p>
-                </div>
-              
-                <div class="featureDetails">
-                  <h2>Inventory</h2>
-                  <p>Now you can see your whole inventory in one place, and easily add or update your data.</p>
-                  
-                </div>
-                <div class="featureDetails">
-                    <h2>Transactions</h2>
-                    <p>Complete client transaction histories are now two clicks away. Transactions even update your inventory.</p>
-                    
-                  </div>
-                </div>
-        
-          
-            <div class="featureDetails right">
-                <div class="featureDetails">
-                <h2>Installments</h2>
-                <p>Quickly see who is due for an installment or enter a successfully paid installment.</p>
-            
-                </div>
-                <div class="featureDetails">
-                  <h2>Search</h2>
-                  <p>Instant access to your entire client base by name, location or both.</p>
-                
-                </div>
-                <div class="featureDetails">
-                    <h2>Lead Support</h2>
-                    <p>Search and categorize clients based on their lead potential.</p>
-                  
-                  </div>
-            </div>
-        </div>
- 
-      </section>
-      <section class="feature-spotlight">
-        <h1 class="spotlight-title">Feature Spotlight</h1>
-        <div class="gif-container">
-          <img src="./images/Transaction2.gif">
-        </div>
+          <div class="imgContainer">
+            <img
+              data-feature="transaction"
+              class="featureImage active"
+              src="./images/Transaction2.gif"
+            />
+            <img
+              data-feature="search"
+              class="featureImage"
+              src="./images/search.gif"
+            />
+            <img
+              data-feature="installment"
+              class="featureImage"
+              src="./images/Transaction2.gif"
+            />
+            <img
+              data-feature="inventory"
+              class="featureImage"
+              src="./images/search.gif"
+            />
+          </div>
 
+          <div class="featureDetails right">
+            <div class="featureDetails">
+              <p data-feature="search" class="featureItem">
+                SEARCH BY NAME, LOCATION, OR BOTH
+              </p>
+              <!-- <p class="featureItem">
+                    Instant access to your entire client base by name, location or
+                    both.
+                  </p> -->
+            </div>
+            <div class="featureDetails">
+              <p data-feature="transaction" class="featureItem active">
+                VIEW TRANSACTION HISTORIES
+              </p>
+              <!-- <p class="featureItem">
+                Complete client transaction histories are now two clicks away.
+              </p> -->
+            </div>
+            <div class="featureDetails">
+              <p data-feature="installment" class="featureItem">
+                QUICKLY SEE INSTALLMENTS
+              </p>
+              <!-- <p class="featureItem">
+                Quickly see who is due for an installment or enter a
+                successfully paid installment.
+              </p> -->
+            </div>
+            <div class="featureDetails">
+              <p data-feature="inventory" class="featureItem">
+                MANAGE YOUR INVENTORY
+              </p>
+              <!-- <p>
+                  Now you can see your whole inventory in one place, and easily
+                  add or update your data.
+                </p> -->
+            </div>
+            <!-- <div class="featureDetails">
+              <h2>Lead Support</h2>
+              <p>
+                Search and categorize clients based on their lead potential.
+              </p>
+            </div> -->
+          </div>
+        </div>
       </section>
       <section class="lower-section">
-          <div class="about">
-              <div class='profiles'>
-               
-                <img class="profile-photos" alt="Search Image" src="./images/joshProfile.jpg" />
-                <h3>Josh Kersting</h3>
-                <p>Full Stack Developer</p>
-              </div>
-              <div class='profiles'>
-                  <img class="profile-photos" alt="Search Image" src="./images/chaseProfile.png" />
-                  <h3>Chase Garsee</h3>
-                  <p>Full Stack Developer</p>
-              </div>
-              <div class='profiles'>
-                  
-                  <img class="profile-photos" alt="Search Image" src="./images/andrewProfile.JPG" />
-                  <h3>Andrew Safran</h3>
-                  <p>Full Stack Developer</p>
-              </div>
-              <div class='profiles'>
-                  
-                  <img class="profile-photos" alt="Search Image" src="./images/dustinProfile.png" />
-                  <h3>Dusin Bailey</h3>
-                  <p>Full Stack Developer</p>
-              </div>
-              <div class='profiles'>
-                  
-                  <img class="profile-photos" alt="Search Image" src="./images/jasonProfile.png" />
-                  <h3>Jason Tyzzer</h3>
-                  <p>Android Developer</p>
-              </div>
-              <div class='profiles'>
-                  
-                  <img class="profile-photos" alt="Search Image" src="./images/jasonProfile.png" />
-                  <h3>Lowell Richardson</h3>
-                  <p>Team Lead</p>
-              </div>
+        <div class="about">
+          <div class="profiles">
+            <img
+              class="profile-photos"
+              alt="Search Image"
+              src="./images/joshProfile.jpg"
+            />
+            <h3>Josh Kersting</h3>
+            <p>Full Stack Developer</p>
           </div>
+          <div class="profiles">
+            <img
+              class="profile-photos"
+              alt="Search Image"
+              src="./images/chaseProfile.png"
+            />
+            <h3>Chase Garsee</h3>
+            <p>Full Stack Developer</p>
+          </div>
+          <div class="profiles">
+            <img
+              class="profile-photos"
+              alt="Search Image"
+              src="./images/andrewProfile.JPG"
+            />
+            <h3>Andrew Safran</h3>
+            <p>Full Stack Developer</p>
+          </div>
+          <div class="profiles">
+            <img
+              class="profile-photos"
+              alt="Search Image"
+              src="./images/dustinProfile.png"
+            />
+            <h3>Dusin Bailey</h3>
+            <p>Full Stack Developer</p>
+          </div>
+          <div class="profiles">
+            <img
+              class="profile-photos"
+              alt="Search Image"
+              src="./images/jasonProfile.png"
+            />
+            <h3>Jason Tyzzer</h3>
+            <p>Android Developer</p>
+          </div>
+          <div class="profiles">
+            <img
+              class="profile-photos"
+              alt="Search Image"
+              src="./images/jasonProfile.png"
+            />
+            <h3>Lowell Richardson</h3>
+            <p>Team Lead</p>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
-        <small>&copy;</small>
+      <small>&copy;</small>
     </footer>
   </body>
 </html>

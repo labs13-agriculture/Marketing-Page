@@ -84,14 +84,14 @@ h6 {
   color: #ffffffe6;
 }
 .index .top-section .top-section-intro-detail {
-  font-family: 'Josefin', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   color: white;
   color: #ffffff80;
   letter-spacing: 3px;
 }
 .index .top-section .top-section-detail {
-  font-family: 'Mandali', sans-serif;
+  font-family: "Mandali", sans-serif;
   font-size: 2rem;
   color: white;
   color: #ffffff80;
@@ -141,83 +141,16 @@ h6 {
   color: white;
 }
 .index .mid-section .feature-title {
-  font-family: 'Josefin', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 100px 0px 20px 10%;
   color: #40e0d0c4;
 }
 .index .mid-section p.long-feature-description {
   width: 80%;
   margin: 0px auto;
-  font-family: 'Josefin', sans-serif;
+  font-family: "Mandali", sans-serif;
   font-size: 2.5rem;
   color: #ffffffe6;
-}
-.index .mid-section .featureDiv {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  margin: 0px auto 40px;
-  border-radius: 5px;
-}
-.index .mid-section .featureDiv .featureDetails h2 {
-  font-family: 'Josefin', sans-serif;
-  font-size: 2rem;
-}
-.index .mid-section .featureDiv .featureDetails.left {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  background: #222222ab;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.index .mid-section .featureDiv .featureDetails.left h2 {
-  color: #40e0d0c4;
-  display: inline;
-}
-.index .mid-section .featureDiv .featureDetails.right {
-  display: flex;
-  flex-direction: column;
-  background: #222222ab;
-  padding: 20px;
-}
-.index .mid-section .featureDiv .featureDetails.right h2 {
-  color: #40e0d0c4;
-}
-@media (max-width: 500px) {
-  .index .mid-section .featureDiv {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.index .mid-section .featureDiv img {
-  max-width: 45%;
-}
-@media (max-width: 500px) {
-  .index .mid-section .featureDiv img {
-    max-width: 95%;
-  }
-}
-.index .mid-section .featureDiv p {
-  padding: 0px 100px 20px 0px;
-  font-family: 'Josefin', sans-serif;
-  font-weight: 400;
-  color: #ffffffbf;
-}
-@media (max-width: 500px) {
-  .index .mid-section .featureDiv p {
-    max-width: 95%;
-  }
-}
-.index .mid-section #middle-feature {
-  display: flex;
-  flex-direction: row-reverse;
-}
-@media (max-width: 500px) {
-  .index .mid-section #middle-feature {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 .index .feature-spotlight {
   height: 800px;
@@ -302,6 +235,62 @@ h6 {
   .index .about .profile-photos {
     width: 200px;
     height: 200px;
+  }
+}
+.featureDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 40px auto;
+  border-radius: 5px;
+}
+.featureDiv .featureDetails h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+.featureDiv .imgContainer .featureImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 5px;
+  display: none;
+}
+.featureDiv .imgContainer .featureImage.active {
+  display: block;
+}
+.featureDiv .featureDetails.right {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.featureDiv .featureDetails.right .featureItem {
+  color: #40e0d0;
+  padding: 25px 15px;
+  margin-left: 20px;
+  border-radius: 3px;
+  width: 300px;
+}
+.featureDiv .featureDetails.right .featureItem.active {
+  border-left: 3px solid #40e0d0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  background: rgba(47, 47, 52, 0.3);
+}
+@media (max-width: 500px) {
+  .featureDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.featureDiv p {
+  padding: 0px 100px 20px 0px;
+  font-family: "Josefin", sans-serif;
+  font-weight: 400;
+  color: #ffffffbf;
+}
+@media (max-width: 500px) {
+  .featureDiv p {
+    max-width: 95%;
   }
 }
 footer {
