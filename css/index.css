@@ -249,12 +249,17 @@ h6 {
 .index .lower-section {
   justify-content: center;
   display: flex;
+  background: #131111;
 }
 .index .about {
   display: flex;
   width: 80%;
   padding: 60px 0px;
   justify-content: space-between;
+  font-family: "Mandali", sans-serif;
+}
+.index .about .profiles {
+  color: white;
 }
 @media (max-width: 500px) {
   .index .about {
@@ -271,6 +276,11 @@ h6 {
     margin: 15px auto;
   }
 }
+.index .about .profiles h3 {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  color: #40e0d0c4;
+}
 @media (max-width: 500px) {
   .index .about .profiles h3 {
     font-size: 2.8rem;
@@ -282,9 +292,11 @@ h6 {
   }
 }
 .index .about .profile-photos {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 8%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 @media (max-width: 500px) {
   .index .about .profile-photos {
