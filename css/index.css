@@ -46,6 +46,11 @@ h6 {
   padding: 10px 30px;
   z-index: 10;
 }
+@media (max-width: 500px) {
+  .header {
+    padding: 5px 20px;
+  }
+}
 .header .logo {
   font-family: 'Josefin', sans-serif;
   font-size: 1.4rem;
@@ -60,7 +65,7 @@ h6 {
 .header a {
   color: inherit;
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 20px;
   transition: all 0.35s ease;
 }
 .header a:hover {
@@ -83,9 +88,22 @@ header.index.header nav a {
   overflow: hidden;
   background: radial-gradient(#215e49bf, #1c1e3c);
 }
+.index .top-section .lineBreak {
+  display: none;
+}
+@media (max-width: 550px) {
+  .index .top-section .lineBreak {
+    display: inline;
+  }
+}
 .index .top-section .elevator-line {
   font-size: 7rem;
   color: #ffffffe6;
+}
+@media (max-width: 550px) {
+  .index .top-section .elevator-line {
+    line-height: 1.15;
+  }
 }
 .index .top-section .top-section-intro-detail {
   font-family: "Josefin Sans", sans-serif;
@@ -100,6 +118,23 @@ header.index.header nav a {
   color: white;
   color: #ffffff80;
   overflow: hidden;
+  width: 100%;
+  padding: 0 180px;
+}
+@media (max-width: 1200px) {
+  .index .top-section .top-section-detail {
+    padding: 0 160px;
+  }
+}
+@media (max-width: 1000px) {
+  .index .top-section .top-section-detail {
+    padding: 0 120px;
+  }
+}
+@media (max-width: 800px) {
+  .index .top-section .top-section-detail {
+    padding: 0;
+  }
 }
 .index .app-display {
   position: relative;
@@ -117,7 +152,7 @@ header.index.header nav a {
   max-width: 100%;
 }
 .index .cta {
-  width: 750px;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +189,7 @@ header.index.header nav a {
   font-family: "Mandalin Sans", sans-serif;
   margin: 100px auto 20px auto;
   color: #40e0d0c4;
-  max-width: 1000px;
+  max-width: 1400px;
   width: 80%;
   font-size: 2rem;
 }
@@ -170,7 +205,7 @@ header.index.header nav a {
 }
 .index .mid-section p.long-feature-description {
   width: 80%;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0px auto;
   font-family: "Mandali", sans-serif;
   font-size: 1.8rem;
@@ -205,9 +240,16 @@ header.index.header nav a {
   border-radius: 20px;
 }
 .index .lower-section {
-  justify-content: center;
-  display: flex;
+  padding-top: 30px;
   background: #131111;
+}
+.index .lower-section h2 {
+  font-family: "Mandalin Sans", sans-serif;
+  margin: 0 auto;
+  color: #40e0d0c4;
+  max-width: 1400px;
+  width: 80%;
+  font-size: 2rem;
 }
 .index .about {
   display: flex;
@@ -252,9 +294,9 @@ header.index.header nav a {
   }
 }
 .index .about .profile-photos {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   height: auto;
   border-radius: 4px;
   -webkit-filter: grayscale(100%);
@@ -309,6 +351,7 @@ header.index.header nav a {
     justify-content: space-evenly;
     width: 100%;
     margin-top: 20px;
+    max-width: none;
   }
 }
 .featureDiv .featureDetails.right .featureItem {
@@ -322,6 +365,11 @@ header.index.header nav a {
   margin-bottom: 20px;
   font-size: 1.4rem;
 }
+@media (max-width: 463px) {
+  .featureDiv .featureDetails.right .featureItem i {
+    display: none;
+  }
+}
 .featureDiv .featureDetails.right .featureItem .hide {
   font-size: inherit;
 }
@@ -333,8 +381,13 @@ header.index.header nav a {
 @media (max-width: 1000px) {
   .featureDiv .featureDetails.right .featureItem {
     width: auto;
-    max-width: 25%;
+    max-width: 100%;
     display: inline-block;
+  }
+}
+@media (max-width: 800px) {
+  .featureDiv .featureDetails.right .featureItem {
+    max-width: 35%;
   }
 }
 .featureDiv .featureDetails.right .featureItem:hover {

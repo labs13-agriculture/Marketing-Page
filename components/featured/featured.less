@@ -48,6 +48,7 @@
       justify-content: space-evenly;
       width: 100%;
       margin-top: 20px;
+      max-width: none;
     }
 
     .featureItem {
@@ -62,6 +63,12 @@
 
       font-size: 1.4rem;
 
+      i{
+        @media (max-width: 463px) { // remove icon for more space
+          display: none;
+        }
+      }
+
       .hide {
         font-size: inherit;
 
@@ -72,8 +79,12 @@
 
       @media (max-width: 1000px) {
         width: auto;
-        max-width: 25%;
+        max-width: 100%; //Keeps search icon on same line, need to shrink at lower sizes
         display: inline-block;
+      }
+
+      @media @tablet{
+        max-width: 35%;
       }
 
       &:hover {
