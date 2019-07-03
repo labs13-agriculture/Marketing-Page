@@ -17,9 +17,23 @@ header.index.header nav a {
 
     background: radial-gradient(#215e49bf, #1c1e3c);
 
+    .lineBreak{
+      display: none;
+
+      @media (max-width: 550px) {
+        display: inline;
+      }
+    }
+
     .elevator-line {
       font-size: 7rem;
       color: #ffffffe6;
+
+      @media (max-width: 550px){
+        line-height: 1.15;
+      }
+
+      
     }
     .top-section-intro-detail {
       font-family: "Josefin Sans", sans-serif;
@@ -34,6 +48,20 @@ header.index.header nav a {
       color: white;
       color: #ffffff80;
       overflow: hidden;
+      width: 100%;
+      padding: 0 180px;
+
+      @media(max-width: 1200px){
+        padding: 0 160px;
+      }
+
+      @media (max-width: 1000px){
+        padding: 0 120px;
+      }
+
+      @media(max-width: 800px){
+        padding: 0;
+      }
     }
   }
 
@@ -58,7 +86,7 @@ header.index.header nav a {
     }
   }
   .cta {
-    width: 750px;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +131,7 @@ header.index.header nav a {
       font-family: "Mandalin Sans", sans-serif;
       margin: 100px auto 20px auto;
       color: #40e0d0c4;
-      max-width: 1000px;
+      max-width: 1400px;
       width: 80%;
       font-size: 2rem;
     }
@@ -124,7 +152,7 @@ header.index.header nav a {
     
     p.long-feature-description {
       width: 80%;
-      max-width: 1000px;
+      max-width: 1400px;
 
       margin: 0px auto;
 
@@ -182,9 +210,17 @@ header.index.header nav a {
   }
 
   .lower-section {
-    justify-content: center;
-    display: flex;
+    padding-top: 30px;
     background: #131111;
+
+    h2{
+      font-family: "Mandalin Sans", sans-serif;
+      margin: 0 auto;
+      color: #40e0d0c4;
+      max-width: 1400px;
+      width: 80%;
+      font-size: 2rem;
+    }
   }
   .about {
     display: flex;
@@ -232,10 +268,10 @@ header.index.header nav a {
       // width: 100px;
       // height: 100px;
       // border-radius: 50%;
-      max-width: 300px;
+      max-width: 250px;
       width: 100%;
 
-      max-height: 300px;
+      max-height: 250px;
       height: auto;
 
       border-radius: 4px;
