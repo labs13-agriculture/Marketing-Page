@@ -1,7 +1,7 @@
 .featureDiv {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 
   width: 80%;
   max-width: 1000px;
@@ -31,16 +31,16 @@
 
       &.active {
         display: block;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 15px rgba(22, 19, 19, 0.3),
+          0 10px 10px rgba(0, 0, 0, 0.3);
       }
     }
   }
 
   .featureDetails.right {
-    width: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
 
     @media (max-width: 800px) {
       flex-direction: row;
@@ -57,7 +57,10 @@
       border-radius: 3px;
       width: 300px;
       border-bottom: 3px solid transparent;
-      color: rgba(255, 255, 255, 0.31);
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+
+      font-size: 1.4rem;
 
       .hide {
         font-size: inherit;
@@ -68,11 +71,6 @@
       }
 
       @media (max-width: 1000px) {
-        margin-bottom: 20px;
-        width: auto;
-      }
-
-      @media (max-width: 800px) {
         width: auto;
         max-width: 25%;
         display: inline-block;
