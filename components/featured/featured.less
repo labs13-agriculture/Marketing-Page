@@ -1,0 +1,117 @@
+.featureDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto;
+
+  border-radius: 5px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featureDetails {
+    h2 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 2rem;
+    }
+  }
+
+  .imgContainer {
+    .featureImage {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 5px;
+      display: none;
+
+      &.active {
+        display: block;
+        box-shadow: 0 0 15px rgba(22, 19, 19, 0.3),
+          0 10px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .featureDetails.right {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .featureItem {
+      color: @accent-blue;
+      padding: 5px 10px;
+      margin-left: 20px;
+      border-radius: 3px;
+      width: 300px;
+      border-bottom: 3px solid transparent;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+
+      font-size: 1.4rem;
+
+      .hide {
+        font-size: inherit;
+
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        width: auto;
+        max-width: 25%;
+        display: inline-block;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active {
+        border-left: 3px solid @accent-blue;
+        background: rgba(47, 47, 52, 0.3);
+        color: @accent-blue;
+
+        @media (max-width: 800px) {
+          border-left: none;
+          border-bottom: 3px solid @accent-blue;
+          box-shadow: none;
+        }
+
+        // @media (max-width: 800px) {
+        //   border-top: none;
+        //   border-bottom: 3px solid @accent-blue;
+        //   box-shadow: none;
+        // }
+      }
+    }
+  }
+
+  @media @mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    padding: 0px 100px 20px 0px;
+    font-family: "Josefin", sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    @media @mobile {
+      max-width: 95%;
+    }
+  }
+}
