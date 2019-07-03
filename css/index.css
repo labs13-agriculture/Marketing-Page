@@ -309,6 +309,7 @@ header.index.header nav a {
     justify-content: space-evenly;
     width: 100%;
     margin-top: 20px;
+    max-width: none;
   }
 }
 .featureDiv .featureDetails.right .featureItem {
@@ -322,6 +323,11 @@ header.index.header nav a {
   margin-bottom: 20px;
   font-size: 1.4rem;
 }
+@media (max-width: 463px) {
+  .featureDiv .featureDetails.right .featureItem i {
+    display: none;
+  }
+}
 .featureDiv .featureDetails.right .featureItem .hide {
   font-size: inherit;
 }
@@ -333,8 +339,13 @@ header.index.header nav a {
 @media (max-width: 1000px) {
   .featureDiv .featureDetails.right .featureItem {
     width: auto;
-    max-width: 25%;
+    max-width: 100%;
     display: inline-block;
+  }
+}
+@media (max-width: 800px) {
+  .featureDiv .featureDetails.right .featureItem {
+    max-width: 35%;
   }
 }
 .featureDiv .featureDetails.right .featureItem:hover {
